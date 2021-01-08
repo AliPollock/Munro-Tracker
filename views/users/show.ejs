@@ -1,0 +1,40 @@
+<%- include ("../partials/header") %>
+
+<div class="container">
+    <div class="row" id="profile-row">
+        <div class="col-md-4">
+            <div class="card" >
+                <div class=" caption-full">
+                    <div class="card-body">
+                        
+                        <img src="<%= user.avatar %>" alt="user profile image">
+                        <p> email: <%= user.email %></p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <h1 id="name"><%= user.firstName + " " + user.lastName%></h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cupiditate eum eveniet voluptatum voluptatibus. Officia libero, aut natus vitae repellat exercitationem quidem voluptatum distinctio! Earum pariatur in ex neque quod.</p>
+                <h3><%= user.username %>'s Munros</h3>
+                <% campgrounds.forEach(function(campground){ %>
+                    <ul>
+                        <a href="/campgrounds/<%= campground.id %>"><%= campground.name %></a>
+                    </ul>
+                <% }); %>
+                <h3><%= user.username %>'s Comments</h3>
+                <% comments.forEach(function(comment){ %>
+                    <ul>
+                        <a href="#"><%= comment.text %></a>
+                    </ul>
+                <% }); %>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<%- include ("../partials/footer") %>

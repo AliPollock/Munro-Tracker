@@ -1,0 +1,31 @@
+.card img {
+	width: 100%;
+}
+.comment-button {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.comment-box {
+	background-color: rgb(202, 212, 216);
+}
+
+.delete-button {
+	display: inline;
+}
+
+#map {
+	height: 400px;
+	width: 100%;
+}
+
+#profile-row {
+	margin-top: 6em;
+}
+
+#name {
+	margin-bottom: 20px;
+}
+#more-info-button {
+	margin-bottom: 10px;
+}

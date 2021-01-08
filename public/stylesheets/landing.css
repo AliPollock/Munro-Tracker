@@ -1,0 +1,82 @@
+body {
+	background-color: #000;
+}
+
+#landing-header {
+	z-index: 1;
+	position: relative;
+	text-align: center;
+	padding-top: 40vh;
+}
+
+#landing-header h1 {
+	color: #fff;
+}
+
+.slideshow {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.slideshow li {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	opacity: 0;
+	z-index: 0;
+	animation: imageAnimation 25s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+	background-image: url(https://www.lovefromscotland.co.uk/wp-content/uploads/2017/08/The-Cobbler-Ben-Arthur-Needle.jpg);
+}
+.slideshow li:nth-child(2) {
+	background-image: url(https://scotland.nordicvisitor.com/images/1/scotland/ben_nevis_loch_linnhe_from_camusnagaul.jpg);
+	animation-delay: 5s;
+}
+.slideshow li:nth-child(3) {
+	background-image: url(https://images.hdqwalls.com/download/mountains-stones-scotland-grasslands-ben-nevis-8k-vw-2560x1440.jpg);
+	animation-delay: 10s;
+}
+.slideshow li:nth-child(4) {
+	background-image: url(https://www.wallpaperflare.com/static/387/679/688/loch-lomond-mountain-body-of-water-boat-wallpaper-preview.jpg);
+	animation-delay: 15s;
+}
+.slideshow li:nth-child(5) {
+	background-image: url(https://i.pinimg.com/originals/68/16/5c/68165c245712a10bcbf2e483bcab2df3.jpg);
+	animation-delay: 20s;
+}
+
+@keyframes imageAnimation {
+	0% {
+		opacity: 0;
+		animation-timing-function: ease-in;
+	}
+	10% {
+		opacity: 1;
+		animation-timing-function: ease-out;
+	}
+	20% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0;
+	}
+}
+
+/* Older browser support - class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}

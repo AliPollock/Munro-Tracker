@@ -1,0 +1,34 @@
+<%- include ("../partials/header") %>
+
+<div class="container col-lg-6 col-xl-4">
+	<h1>Edit <%= campground.name %></h1>
+	<div class="col-lg-4 col-md-6 col-sm-12" id="form-container"></div>
+	<form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+		<div class="form-group">
+			<label for="nameInput">Name</label>
+			<input class="form-control" type="text" placeholder="name" name="campground[name]" id="nameInput" value="<%= campground.name %>"/>
+			<small id="nameHelp" class="form-text text-muted">You can add any mountain you want here</small>
+		</div>
+		<div class="form-group">
+			<label for="walkTime">walkTime</label>
+			<input class="form-control" type="text" placeholder="walkTime" name="campground[walkTime]" id="walkTimeInput" value="<%= campground.walkTime %>"/>
+		</div>
+		<div class="form-group">
+			<label for="url-input">Url</label>
+			<input class="form-control" type="text" placeholder="image Url" name="campground[image]" id="url-input" value="<%= campground.image %>"/>
+		</div>
+		<div class="form-group">
+			<label for="description-input">Description</label>
+			<input class="form-control" type="text" placeholder="description" name="campground[description]" id="description-input" value="<%= campground.description %>" />
+		</div>
+		<div class="form-group">
+			<label for="location">Location</label>
+			<input class="form-control" type="text" name="location" id="location" value="<%= campground.location %>">
+		</div>
+		<input type="submit" value="submit" class="form-control btn btn-primary"/>
+	</form>
+	<a href="/campgrounds/<%= campground._id %>">Go back</a>
+
+
+</div>
+<%- include ("../partials/footer") %>
